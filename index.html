@@ -51,8 +51,8 @@
       <!-- 2nd -->
       <div class="p-[20px] grid grid-cols-3 gap-4">
         <!-- Box 1-->
-        <div class="bg-white rounded-xl">
-          <div class="p-4 flex flex-col gap-2">
+        <div class="bg-white rounded-xl box">
+          <div class="p-4 flex flex-col gap-2 box-first">
             <div class="bg-[#F5F5F5] w-fit px-4 py-1 rounded-xl text-[14px]">ShopEase</div>
             <h2 class="font-[500] text-gray-800 text-[18px]">Fix Mobile Button Issue</h2>
             <p class="bg-[#F5F5F5] text-[14px] px-3 py-2 rounded-xl text-gray-700">Debug using Chrome DevTools, check for...</p>
@@ -66,8 +66,8 @@
           </div>
         </div>
         <!-- Box 2-->
-        <div class="bg-white rounded-xl">
-          <div class="p-4 flex flex-col gap-2">
+        <div class="bg-white rounded-xl box">
+          <div class="p-4 flex flex-col gap-2 box-first">
             <div class="bg-[#F5F5F5] w-fit px-4 py-1 rounded-xl text-[14px]">CloudSync</div>
             <h2 class="font-[500] text-gray-800 text-[18px]">Add Dark Mode</h2>
             <p class="bg-[#F5F5F5] text-[14px] px-3 py-2 rounded-xl text-gray-700">Store the user's preference in localStorage, update...</p>
@@ -81,8 +81,8 @@
           </div>
         </div>
         <!-- Box 3-->
-        <div class="bg-white rounded-xl">
-          <div class="p-4 flex flex-col gap-2">
+        <div class="bg-white rounded-xl box">
+          <div class="p-4 flex flex-col gap-2 box-first">
             <div class="bg-[#F5F5F5] w-fit px-4 py-1 rounded-xl text-[14px]">SwiftPay</div>
             <h2 class="font-[500] text-gray-800 text-[18px]">Optimize Home page</h2>
             <p class="bg-[#F5F5F5] text-[14px] px-3 py-2 rounded-xl text-gray-700">Debug using Chrome DevTools, check for...</p>
@@ -96,8 +96,8 @@
           </div>
         </div>
         <!-- Box 4-->
-        <div class="bg-white rounded-xl">
-          <div class="p-4 flex flex-col gap-2">
+        <div class="bg-white rounded-xl box">
+          <div class="p-4 flex flex-col gap-2 box-first">
             <div class="bg-[#F5F5F5] w-fit px-4 py-1 rounded-xl text-[14px]">Meta</div>
             <h2 class="font-[500] text-gray-800 text-[18px]">Add new emoji 🤲</h2>
             <p class="bg-[#F5F5F5] text-[14px] px-3 py-2 rounded-xl text-gray-700">Store the user's preference in localStorage, update...</p>
@@ -111,8 +111,8 @@
           </div>
         </div>
         <!-- Box 5-->
-        <div class="bg-white rounded-xl">
-          <div class="p-4 flex flex-col gap-2">
+        <div class="bg-white rounded-xl box">
+          <div class="p-4 flex flex-col gap-2 box-first">
             <div class="bg-[#F5F5F5] w-fit px-4 py-1 rounded-xl text-[14px]">Google LLC</div>
             <h2 class="font-[500] text-gray-800 text-[18px]">Integrate OpenAI API</h2>
             <p class="bg-[#F5F5F5] text-[14px] px-3 py-2 rounded-xl text-gray-700">Debug using Chrome DevTools, check for...</p>
@@ -126,8 +126,8 @@
           </div>
         </div>
         <!-- Box 6-->
-        <div class="bg-white rounded-xl">
-          <div class="p-4 flex flex-col gap-2">
+        <div class="bg-white rounded-xl box">
+          <div class="p-4 flex flex-col gap-2 box-first">
             <div class="bg-[#F5F5F5] w-fit px-4 py-1 rounded-xl text-[14px]">Glassdoar</div>
             <h2 class="font-[500] text-gray-800 text-[18px]">Improve Job searching</h2>
             <p class="bg-[#F5F5F5] text-[14px] px-3 py-2 rounded-xl text-gray-700">Store the user's preference in localStorage, update...</p>
@@ -151,14 +151,12 @@
       </div>
       <!-- 2nd -->
       <div id="history_list" class="px-[20px] py-[15px]">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, molestias.
-        </p>
       </div>
     </div>
   </section>
   <!-- <=====(Script Link)=====>-->
   <script src="./script.js">
-    let randomColor=document.getElementById("random-bg"),mainBody=document.getElementById("main_body"),realTimeDate=document.getElementById("real_time_date"),historyList=document.getElementById("history_list"),clearHistory=document.getElementById("clear_history"),completedBtn=document.querySelectorAll(".completed_button"),incrementNumber=document.getElementById("increment_number"),decrementNumber=document.getElementById("decrement_number"),btnCount=0;function randomColorCreate(){return`rgb(${Math.floor(255*Math.random())}, ${Math.floor(255*Math.random())}, ${Math.floor(255*Math.random())})`}function todayDate(){let e=new Date,t=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"][e.getDay()],n=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][e.getMonth()],r;return`<p style="font-size: 20px;">${t} ,</p> <p style="font-size: 20px; font-weight: 600">${n} ${e.getDate()} ${e.getFullYear()}</p>`}for(let button of(randomColor.addEventListener("click",()=>{mainBody.style.backgroundColor=randomColorCreate()}),document.getElementById("discoverNew").addEventListener("click",()=>{window.location.href="./task-board/blog"}),realTimeDate.innerHTML=todayDate(),clearHistory.addEventListener("click",()=>{historyList.innerHTML=" "}),completedBtn))button.addEventListener("click",()=>{alert("Board Updated Successfully"),incrementNumber.innerText=parseInt(incrementNumber.innerText)+1,decrementNumber.innerText=parseInt(decrementNumber.innerText)-1,!button.disabled&&(button.disabled=!0,button.style.opacity="0.5",btnCount++),btnCount===completedBtn.length&&alert("All tasks completed!")});
+    let randomColor=document.getElementById("random-bg"),mainBody=document.getElementById("main_body"),realTimeDate=document.getElementById("real_time_date"),historyList=document.getElementById("history_list"),clearHistory=document.getElementById("clear_history"),completedBtn=document.querySelectorAll(".completed_button"),incrementNumber=document.getElementById("increment_number"),decrementNumber=document.getElementById("decrement_number"),btnCount=0;function randomColorCreate(){return`rgb(${Math.floor(255*Math.random())}, ${Math.floor(255*Math.random())}, ${Math.floor(255*Math.random())})`}function todayDate(){let e=new Date,t=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"][e.getDay()],n=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][e.getMonth()],r;return`<p style="font-size: 20px;">${t} ,</p> <p style="font-size: 20px; font-weight: 600">${n} ${e.getDate()} ${e.getFullYear()}</p>`}for(let button of(randomColor.addEventListener("click",()=>{mainBody.style.backgroundColor=randomColorCreate()}),document.getElementById("discoverNew").addEventListener("click",()=>{window.location.href="./task-board/blog"}),realTimeDate.innerHTML=todayDate(),completedBtn))button.addEventListener("click",e=>{alert("Board Updated Successfully"),incrementNumber.innerText=parseInt(incrementNumber.innerText)+1,decrementNumber.innerText=parseInt(decrementNumber.innerText)-1,!button.disabled&&(button.disabled=!0,button.style.opacity="0.5",btnCount++),btnCount===completedBtn.length&&alert("All tasks completed!");let t=e.target.closest(".box").querySelector(".box-first").querySelector("h2").innerText,n=document.createElement("p");n.innerHTML=`<p style="background-color: #ffffff; font-size: 14px; padding: 8px 15px; border-radius: 16px;">You have Complete The Task ${t}</p>`,historyList.appendChild(n)});clearHistory.addEventListener("click",()=>{historyList.innerHTML=" "});
   </script>
 </body>
 </html>
