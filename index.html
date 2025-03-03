@@ -18,6 +18,8 @@
     </div>
   </section>
   <!-- <=====(Script Link)=====>-->
-  <script src="./script.js"></script>
+  <script src="./script.js">
+    let randomColor=document.getElementById("random-bg"),mainBody=document.getElementById("main_body");function randomColorCreate(){return`rgb(${Math.floor(255*Math.random())}, ${Math.floor(255*Math.random())}, ${Math.floor(255*Math.random())})`}randomColor.addEventListener("click",()=>{mainBody.style.backgroundColor=randomColorCreate()});
+  </script>
 </body>
 </html>
